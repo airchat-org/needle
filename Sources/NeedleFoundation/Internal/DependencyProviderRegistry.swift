@@ -26,9 +26,7 @@ import Foundation
 // method in the base component class. Generate extensions to all the
 // component subclasses that override the method to instantiate the
 // dependnecy providers.
-@preconcurrency
-@MainActor
-public class __DependencyProviderRegistry {
+@MainActor public class __DependencyProviderRegistry {
 
     /// The singleton instance.
     public static let instance = __DependencyProviderRegistry()

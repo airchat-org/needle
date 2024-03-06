@@ -25,7 +25,7 @@ import Foundation
 // method in the base pluginized component class. Generate extensions to
 // all the pluginized component subclasses that override the method to
 // instantiate the dependnecy providers.
-public class __PluginExtensionProviderRegistry {
+@MainActor public class __PluginExtensionProviderRegistry {
 
     /// The singleton instance.
     public static let instance = __PluginExtensionProviderRegistry()
