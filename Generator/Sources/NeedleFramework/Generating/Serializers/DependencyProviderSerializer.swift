@@ -35,6 +35,7 @@ class DependencyProviderFuncSerializer: Serializer {
     func serialize() -> String {
         return """
 /// \(provider.unprocessed.pathString)
+@MainActor
 private func \(funcNameSerializer.serialize())(_ component: NeedleFoundation.Scope) -> AnyObject {
     return \(classNameSerializer.serialize())(\(paramsSerializer.serialize()))
 }\n
