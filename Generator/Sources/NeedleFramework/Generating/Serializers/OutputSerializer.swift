@@ -146,7 +146,8 @@ class OutputSerializer: Serializer {
         \(registrationHelpers)
         #endif
         
-        @MainActor public func registerProviderFactories() {
+        @MainActor
+        public func registerProviderFactories() {
         #if !NEEDLE_DYNAMIC
             \(registrationBody)
         #endif

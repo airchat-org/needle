@@ -17,7 +17,8 @@
 import Foundation
 
 /// The base protocol of a dependency, enabling Needle's parsing process.
-@MainActor public protocol Dependency: AnyObject {}
+@MainActor
+public protocol Dependency: AnyObject {}
 
 #if NEEDLE_DYNAMIC
 public protocol Registration {
@@ -29,7 +30,8 @@ public protocol Registration {
 /// from the `Component` base class, instead of using this protocol
 /// directly.
 /// @CreateMock
-@MainActor public protocol Scope: AnyObject {
+@MainActor
+public protocol Scope: AnyObject {
     /// The path to reach this component on the dependnecy graph.
     var path: [String] { get }
 
@@ -43,6 +45,7 @@ public protocol Registration {
 
 #if NEEDLE_DYNAMIC
 
+@MainActor
 @dynamicMemberLookup
 public class DependencyProvider<DependencyType> {
     
