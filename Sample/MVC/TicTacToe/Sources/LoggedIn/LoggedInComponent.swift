@@ -19,7 +19,7 @@ import UIKit
 
 class LoggedInComponent: Component<EmptyDependency>, LoggedInBuilder {
 
-    public var scoreStream: ScoreStream {
+    var scoreStream: ScoreStream {
         return mutableScoreStream
     }
 
