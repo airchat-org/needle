@@ -17,19 +17,19 @@ class MyComponent: NeedleFoundation.Component<
     MyDependency
 > {
 
-    public let stream: Stream = Stream()
+    let stream: Stream = Stream()
 
-    public var donut: Donut {
+    var donut: Donut {
         return Donut()
     }
 
-    public var sweetsBasket: Basket {
+    var sweetsBasket: Basket {
         return shared {
             Basket(dependency.candy, self.donut)
         }
     }
 
-    public var myChildComponent: MyChildComponent {
+    var myChildComponent: MyChildComponent {
         return MyChildComponent(parent: self)
     }
 
@@ -44,10 +44,10 @@ protocol SomeNonCoreDependency: Dependency {
 }
 
 class SomeNonCoreComponent: NeedleFoundation.NonCoreComponent<    SomeNonCoreDependency  > {
-    public var newNonCoreObject: NonCoreObject? {
+    var newNonCoreObject: NonCoreObject? {
         return NonCoreObject()
     }
-    public var sharedNonCoreObject: SharedObject {
+    var sharedNonCoreObject: SharedObject {
         return shared {
             return SharedObject()
         }
@@ -55,7 +55,7 @@ class SomeNonCoreComponent: NeedleFoundation.NonCoreComponent<    SomeNonCoreDep
 }
 
 class MyRComp: BootstrapComponent {
-    public var rootObj: Obj {
+    var rootObj: Obj {
         return shared {
             Obj()
         }
@@ -63,17 +63,17 @@ class MyRComp: BootstrapComponent {
 }
 
 class My2Component: Component<My2Dependency> {
-    public var book: Book {
+    var book: Book {
         return shared {
             Book()
         }
     }
 
-    public var maybeWallet: Wallet? {
+    var maybeWallet: Wallet? {
         return Wallet()
     }
     
-    public var myStore: MyStorage<MyStorageKey> {
+    var myStore: MyStorage<MyStorageKey> {
         return MyStorage()
     }
 
@@ -98,7 +98,7 @@ class SomePluginizedComp: PluginizedComponent<
   ADependency,
 BExtension,    SomeNonCoreComponent
 >, Stuff {
-    public var tv: Tv {
+    var tv: Tv {
         return LGOLEDTv()
     }
 }

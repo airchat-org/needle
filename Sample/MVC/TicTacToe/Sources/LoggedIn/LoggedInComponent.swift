@@ -23,7 +23,7 @@ protocol LoggedInDependency: Dependency {
 
 class LoggedInComponent: Component<LoggedInDependency>, LoggedInBuilder {
 
-    public var scoreStream: ScoreStream {
+    var scoreStream: ScoreStream {
         return mutableScoreStream
     }
 
